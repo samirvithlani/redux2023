@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { HomeComponent } from './components/HomeComponent';
+import  HomeContainer  from './containers/HomeContainer';
+import HeaderContainer from './containers/HeaderContainer';
+import ProductContainer from './containers/ProductContainer';
+import RecentProduct from './containers/RecentProduct';
+import LoginContainer from './containers/LoginContainer';
+import { Route, Routes } from 'react-router-dom';
+import DashBoard from './containers/DashBoard';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {/* <HomeComponent/> */}
+     
+     {/* <HeaderContainer/> */}
+     {/* <HomeContainer/> */}
+
+     {/* <ProductContainer/> */}
+     <LoginContainer/>
+     <Routes>
+      <Route path='/dashboard' element= {<DashBoard/>}/>
+     </Routes>
+     {/* <RecentProduct/> */}
     </div>
   );
 }
